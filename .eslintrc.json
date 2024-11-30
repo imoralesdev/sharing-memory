@@ -3,5 +3,28 @@
     "next/core-web-vitals",
     "next/typescript",
     "plugin:storybook/recommended"
-  ]
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Object": {
+            "message": "Avoid using 'Object'. Use 'Record<string, unknown>' instead."
+          },
+          "{}": {
+            "message": "Avoid using '{}'. Use 'Record<string, unknown>' or 'unknown' instead."
+          },
+          "Function": {
+            "message": "Avoid using 'Function'. Specify the function signature instead, e.g., '() => void'."
+          }
+        },
+        "extendDefaults": true
+      }
+    ],
+    // Other rules you might want to customize
+    "react/react-in-jsx-scope": "off" // For Next.js
+  }
 }

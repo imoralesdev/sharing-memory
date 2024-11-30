@@ -7,7 +7,7 @@ import Nav from "@/app/components/Nav";
 
 export type HeaderProps = {};
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = () => {
   const handleSearchSubmit = (query: string) => {
     console.log("Search submitted with query:", query);
   };
