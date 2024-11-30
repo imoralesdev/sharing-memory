@@ -6,7 +6,7 @@ import Youtube from "@/app/svg/Youtube";
 
 import "./Footer.css";
 
-export type FooterProps = {};
+export type FooterProps = Record<string, never>;
 
 const Footer: React.FC<FooterProps> = () => {
   return (

@@ -5,7 +5,7 @@ import "./Header.css";
 import Utilitarian from "@/app/components/Utilitarian";
 import Nav from "@/app/components/Nav";
 
-export type HeaderProps = {};
+export type HeaderProps = Record<string, never>;
 
 const Header: React.FC<HeaderProps> = () => {
   const handleSearchSubmit = (query: string) => {
