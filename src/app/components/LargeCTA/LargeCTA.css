@@ -1,0 +1,52 @@
+.large-cta {
+  min-height: 580px;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.large-cta__container {
+  padding: 50px 15px;
+  position: relative;
+}
+
+.large-cta__container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.large-cta__column {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100%;
+  padding: 30px;
+  max-width: 554px;
+  float: right;
+}
+
+.large-cta__title {
+  font-size: 32px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.large-cta__copy {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.large-cta__copy p {
+  margin: 1em 0;
+}
+
+@media (min-width: 1081px) {
+  .large-cta__container {
+    padding-left: var(--size-10);
+    padding-right: var(--size-10);
+  }
+}

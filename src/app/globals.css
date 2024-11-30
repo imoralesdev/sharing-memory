@@ -1,42 +1,125 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import "open-props/style";
+@import "open-props/normalize";
 
 html,
 body {
-  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--gray-1);
+  color: var(--gray-9);
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+button {
+  all: unset;
+  cursor: pointer;
 }
 
-a {
-  color: inherit;
+.services__header,
+.education__header {
+  margin: 60px auto 30px;
+  max-width: 650px;
+  text-align: center;
+  line-height: 1;
+  font-size: 45px;
+}
+
+.education {
+  display: block;
+  overflow: hidden;
+  background: url("https://raw.githubusercontent.com/imoralescs/imoralescs.github.io/master/images/fba7da61.png");
+}
+
+.education__container {
+  position: relative;
+  padding: 50px 5px 50px 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.education__item {
+  display: block;
+  padding: 20px 10px;
+  margin: 0 0 20px;
+  float: left;
+  width: 100%;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.education__item:after,
+.services__item:after {
+  content: "\0020";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.education__item:after,
+.services__item:after {
+  clear: both;
+}
+
+.services {
+  display: block;
+  overflow: hidden;
+  background: url("https://raw.githubusercontent.com/imoralescs/imoralescs.github.io/master/images/fba7da61.png");
+}
+
+.services__container {
+  padding: 50px 0 100px 0;
+  position: relative;
+}
+
+.services__container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.services__item {
+  display: block;
+  margin-bottom: 30px;
+  padding: 0px 15px;
+  position: relative;
+  float: left;
+  width: 100%;
+  zoom: 1;
+  text-decoration: none;
+}
+
+@media (min-width: 1081px) {
+  .education__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: var(--size-10);
+    padding-right: var(--size-10);
+  }
+
+  .services__container {
+    padding-left: var(--size-10);
+    padding-right: var(--size-10);
+  }
+
+  .education__item {
+    padding: 0px 10px;
+  }
+
+  .services__item {
+    width: 50%;
   }
 }

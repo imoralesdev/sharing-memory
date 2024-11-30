@@ -1,0 +1,17 @@
+.footer {
+  background: #8e7c68;
+}
+
+.footer__container {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1081px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-left: var(--size-10);
+    padding-right: var(--size-10);
+  }
+}

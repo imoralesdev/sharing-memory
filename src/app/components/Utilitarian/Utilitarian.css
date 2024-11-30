@@ -1,0 +1,55 @@
+.utilitarian {
+    color: #444;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+  }
+  
+  .utilitarian__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .utilitarian__phone,
+  .utilitarian__language {
+    margin-right: 15px;
+  }
+  
+  .utilitarian__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .utilitarian__search input[type="text"] {
+    background: #eee;
+    border: none;
+    padding: 5px 10px;
+    height: 30px;
+    border-radius: 5px;
+    width: 200px;
+    outline: none;
+  }
+  
+  .utilitarian__search-submit {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #444;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .utilitarian__search-submit .svg__search {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }

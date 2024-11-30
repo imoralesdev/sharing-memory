@@ -1,0 +1,124 @@
+.nav {
+    background-color: #ddc9bc;
+    color: #444;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .nav__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav__primary {
+    display: none;
+  }
+  
+  .nav__primary-item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .nav__primary-link {
+    color: #444;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .nav__primary-link:hover,
+  .nav__primary-link--active {
+    border-color: #444;
+  }
+  
+  /* Menú móvil */
+  .nav__mobile {
+    display: none;
+    background-color: #ddc9bc;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+  }
+  
+  .nav__mobile.show {
+    display: block;
+  }
+  
+  .nav__mobile-item {
+    text-align: center;
+    padding: 10px 0;
+    margin: auto;
+    display: block;
+  }
+  
+  .nav__mobile-link {
+    color: #444;
+    text-decoration: none;
+    display: inline;
+    padding: 10px;
+    transition: border-bottom 0.3s;
+    border-bottom: solid 2px transparent;
+  }
+  
+  .nav__mobile-link:hover,
+  .nav__mobile-link--active {
+    border-bottom: solid 2px #444444;
+    transition: border-bottom 0.3s;
+  }
+  
+  /* Toggle móvil */
+  .nav__mobile-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .nav__mobile-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #444;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .nav__mobile-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .nav__mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav__mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Vista de escritorio */
+  @media (min-width: 1081px) {
+    .nav__primary {
+      display: flex;
+    }
+  
+    .nav__mobile-toggle {
+      display: none;
+    }
+  
+    .nav__mobile {
+      display: none !important;
+    }
+  }
