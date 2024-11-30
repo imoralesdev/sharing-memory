@@ -8,7 +8,7 @@ import "./Footer.css";
 
 export type FooterProps = {};
 
-const Footer: React.FC<FooterProps> = ({}) => {
+const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="footer" role="footer">
       <div className="footer__container">

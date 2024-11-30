@@ -19,6 +19,7 @@ const CardTypeA: React.FC<CardProps> = ({ image, text, variant, title}) => {
     <div className={cardClass}>
       <span className={`${cardClass}__thumbnail-wrap`}>
         <img
+          alt={title}
           className={`${cardClass}__thumbnail`}
           src={image}
         />

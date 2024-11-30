@@ -16,7 +16,7 @@ type NavProps = {
   mobileLinks: NavLink[];
 };
 
-const Nav: React.FC<NavProps> = ({ logo, primaryLinks, mobileLinks }) => {
+const Nav: React.FC<NavProps> = ({ primaryLinks, mobileLinks }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const toggleMobileMenu = () => {
